@@ -1,7 +1,7 @@
 {
     "basics": {
         "name": "Ivan R. Mayta M.",
-        "label": "Estudiante de Ingenieria de Software 💻❤️",
+        "label": "Estudiante de Ingenieria de Software 💻",
         "image": "/me.webp",
         "email": "ivan.mayta.dev@gmail.com",
         "phone": "+51 926786317",
@@ -128,6 +128,16 @@
             ]
         },
         {
+            "name": "Bootstrap",
+            "level": "Avanzado",
+            "keywords": [
+                "Desarrollo Web",
+                "Frontend",
+                "CSS Framework",
+                "Diseño Responsive"
+            ]
+        },
+        {
             "name": "TypeScript",
             "level": "Avanzado",
             "keywords": [
@@ -211,6 +221,26 @@
                 "JavaScript Library",
                 "UI"
             ]
+        },
+        {
+            "name": "Python",
+            "level": "Avanzado",
+            "keywords": [
+                "Desarrollo Web",
+                "Frontend",
+                "JavaScript Library",
+                "UI"
+            ]
+        },
+        {
+            "name": "Django",
+            "level": "Avanzado",
+            "keywords": [
+                "Desarrollo Web",
+                "Frontend",
+                "JavaScript Library",
+                "UI"
+            ]
         }
     ],
     "languages": [
@@ -237,20 +267,17 @@
     ],
     "projects": [
         {
-            "name": "Izimport.com",
+            "name": "izimport.com",
             "isActive": true,
-            "description": "Playground de código HTML, CSS y JavaScript para compartir",
-            "highlights": [
-                "100k visitas al mes",
-                "Desarrollado por la comunidad"
-            ],
-            "url": "https://codi.link",
-            "github": "https://github.com/midudev/codi.link"
+            "description": "Plataforma web que facilita el seguimiento de envíos de DHL y la cotización de importaciones simplificadas en Perú",
+            "highlights": ["Next.js", "React", "Shadcn", "API DHL"],
+            "url": "https://izimport.vercel.app/",
+            "_github": "https://github.com/midudev/codi.link"
         },
         {
             "name": "Importa Facil",
             "isActive": true,
-            "description": "Lista de pruebas técnicas de empresas para practicar programación",
+            "description": "Aplicación móvil que permite a los usuarios rastrear paquetes de DHL y cotizar importaciones simplificadas en Perú.",
             "highlights": [
                 "+100 descargas",
                 "kotlin",
@@ -259,17 +286,14 @@
                 "Api DHL",
                 "Api Exchange Rates"
             ],
-            "url": "https://pruebastecnicas.com",
-            "github": "https://github.com/midudev/pruebas-tecnicas"
+            "url": "https://play.google.com/store/apps/details?id=com.importa.facil",
+            "_github": "https://github.com/midudev/pruebas-tecnicas"
         },
         {
-            "name": "Datawarehouse",
-            "description": "Conferencia de programación en streaming para la comunidad hispanohablante con charlas top",
-            "highlights": [
-                "+15k tickets repartidos",
-                "+50k espectadores en directo"
-            ],
-            "url": "https://miduconf.com"
+            "name": "Perú Compras",
+            "description": "Data warehouse para optimizar la toma de decisiones informadas, aumentar la transparencia y mejorar la eficiencia en la gestión y uso de recursos públicos.",
+            "highlights": ["Business Intelligence", "Power BI", "ETL", "Dax"],
+            "url": "https://ivanmayta.vercel.app"
         }
     ]
 }
