@@ -272,7 +272,7 @@
             "description": "Plataforma web que facilita el seguimiento de envíos de DHL y la cotización de importaciones simplificadas en Perú",
             "highlights": ["Next.js", "React", "Shadcn", "API DHL"],
             "url": "https://izimport.vercel.app/",
-            "_github": "https://github.com/midudev/codi.link"
+            "github": "https://github.com/ivanmayta"
         },
         {
             "name": "Importa Facil",
@@ -287,13 +287,14 @@
                 "Api Exchange Rates"
             ],
             "url": "https://play.google.com/store/apps/details?id=com.importa.facil",
-            "_github": "https://github.com/midudev/pruebas-tecnicas"
+            "github": "https://github.com/ivanmayta"
         },
         {
             "name": "Perú Compras",
             "description": "Data warehouse para optimizar la toma de decisiones informadas, aumentar la transparencia y mejorar la eficiencia en la gestión y uso de recursos públicos.",
             "highlights": ["Business Intelligence", "Power BI", "ETL", "Dax"],
-            "url": "https://ivanmayta.vercel.app"
+            "url": "https://ivanmayta.vercel.app",
+            "github": "https://github.com/ivanmayta"
         }
     ]
 }
