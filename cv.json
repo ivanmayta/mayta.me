@@ -20,15 +20,21 @@
                 "username": "iverse",
                 "url": "https://www.linkedin.com/in/iverse/"
             },
-            {
-                "network": "X",
-                "username": "ivanmayta_",
-                "url": "https://x.com/ivanmayta_"
-            },
+
             {
                 "network": "GitHub",
                 "username": "ivanmayta",
                 "url": "https://github.com/ivanmayta"
+            },
+            {
+                "network": "Portafolio",
+                "username": "iverse.vercel.app",
+                "url": "https://iverse.vercel.app"
+            },
+            {
+                "network": "Cv",
+                "username": "mayta.me",
+                "url": "https://mayta.me"
             }
         ]
     },
@@ -245,12 +251,12 @@
     ],
     "languages": [
         {
-            "language": "Spanish",
-            "fluency": "Native speaker"
+            "language": "Español",
+            "fluency": "Nativo"
         },
         {
-            "language": "English",
-            "fluency": "Advanced"
+            "language": "Ingles",
+            "fluency": "B2"
         }
     ],
     "interests": [
@@ -291,9 +297,9 @@
         },
         {
             "name": "Perú Compras",
-            "description": "Data warehouse para optimizar la toma de decisiones informadas, aumentar la transparencia y mejorar la eficiencia en la gestión y uso de recursos públicos.",
+            "description": "Data warehouse para optimizar la toma de decisiones, aumentar la transparencia y mejorar la eficiencia en la gestión de recursos públicos.",
             "highlights": ["Business Intelligence", "Power BI", "ETL", "Dax"],
-            "url": "https://ivanmayta.vercel.app",
+            "url": "https://iverse.vercel.app",
             "github": "https://github.com/ivanmayta"
         }
     ]
