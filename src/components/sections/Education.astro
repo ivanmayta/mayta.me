@@ -10,7 +10,7 @@ import { education } from "@cv"
       education.map(({ institution, startDate, endDate, area }) => {
         const startYear = new Date(startDate).getFullYear()
         const endYear =
-          endDate != null ? new Date(endDate).getFullYear() : "Actual"
+          endDate != null ? new Date(endDate).getFullYear() : "En curso"
         const years = `${startYear} - ${endYear}`
 
         return (
@@ -21,7 +21,7 @@ import { education } from "@cv"
                   <h3>{institution}</h3>
                 </div>
 
-                <time>{years}</time>
+                <time>{endYear}</time>
               </header>
 
               <footer>
@@ -50,11 +50,13 @@ import { education } from "@cv"
   header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     align-items: flex-start;
     margin-bottom: 4px;
   }
 
   time {
+    text-align: center;
     color: #555;
     font-size: 0.85rem;
     min-width: 102px;
