@@ -80,6 +80,16 @@
 
             "score": "4.0",
             "courses": ["DB1101 - Basic SQL"]
+        },
+        {
+            "institution": "One Oracle Next Education",
+            "url": "https://www.uoc.edu/portal/es/index.html",
+            "area": "Frontend Developer",
+            "studyType": "Bachelor",
+            "startDate": "2021-01-01",
+
+            "score": "4.0",
+            "courses": ["DB1101 - Basic SQL"]
         }
     ],
     "awards": [
@@ -256,7 +266,7 @@
         },
         {
             "language": "Ingles",
-            "fluency": "B2"
+            "fluency": "B1"
         }
     ],
     "interests": [
