@@ -72,9 +72,9 @@
             "courses": ["DB1101 - Basic SQL"]
         },
         {
-            "institution": "Univeridad Privada Peruano Alemana",
+            "institution": "Universidad Autónoma del Perú",
             "url": "https://www.uoc.edu/portal/es/index.html",
-            "area": "Ingeniero de Software",
+            "area": "Ingenieria de Software",
             "studyType": "Bachelor",
             "startDate": "2021-01-01",
 
