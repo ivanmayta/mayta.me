@@ -1,12 +1,12 @@
 {
     "basics": {
-        "name": "Ivan Rodrigo Mayta Mamani",
-        "label": "Estudiante de Ingenieria de Software 💻",
+        "name": "Ivan R. Mayta M.",
+        "label": "Frontend Developerpor por Oracle Next Education ☕",
         "image": "/me.webp",
         "email": "ivan.mayta.dev@gmail.com",
         "phone": "+51 926786317",
         "url": "https://midu.dev",
-        "summary": "Estudiante de Ingeniería de Software con buena formación académica en el Bachillerato Internacional, donde adquirí conocimientos en Tecnologías de la Información en una Sociedad Global (TISG) e inglés. Me apasiona el desarrollo de software y he elaborado proyectos web, móviles y de inteligencia de negocios, aplicando metodologías ágiles como Scrum y Kanban. Busco aplicar y ampliar mis habilidades en un entorno innovador.",
+        "summary": "Desarrollador de software, actualmente enfocado en la web con tecnologías como React, Next.js y Astro. Para dispositivos móviles, Android Studio y Kotlin. \n Como estudiante de Ingeniería de Software, realicé proyectos con Python para la web (Django), desktop (Tkinter), algoritmos de inteligencia artificial para la optimización de sistemas de monitoreo ambiental, análisis de datos para Business Intelligence con Power BI, además de algoritmos y estructuras de datos.",
         "location": {
             "address": "",
             "postalCode": "23004",
@@ -62,18 +62,17 @@
     ],
     "education": [
         {
-            "institution": "Colegio de Alto Rendimiento de Tacna",
-            "url": "https://www.uoc.edu/portal/es/index.html",
-            "area": "Programa Bachillerato Internacional",
+            "institution": "One Oracle Next Education",
+            "url": "",
+            "area": "Frontend Developer",
             "studyType": "Bachelor",
-            "startDate": "2018-01-01",
-            "endDate": "2021-01-01",
+            "endDate": "2024-08-01",
             "score": "4.0",
             "courses": ["DB1101 - Basic SQL"]
         },
         {
             "institution": "Universidad Autónoma del Perú",
-            "url": "https://www.uoc.edu/portal/es/index.html",
+            "url": "",
             "area": "Ingenieria de Software",
             "studyType": "Bachelor",
             "startDate": "2021-01-01",
@@ -81,13 +80,14 @@
             "score": "4.0",
             "courses": ["DB1101 - Basic SQL"]
         },
-        {
-            "institution": "One Oracle Next Education",
-            "url": "https://www.uoc.edu/portal/es/index.html",
-            "area": "Frontend Developer",
-            "studyType": "Bachelor",
-            "startDate": "2021-01-01",
 
+        {
+            "institution": "Colegio de Alto Rendimiento de Tacna",
+            "url": "",
+            "area": "Programa Bachillerato Internacional",
+            "studyType": "Bachelor",
+            "startDate": "2018-01-01",
+            "endDate": "2021-01-01",
             "score": "4.0",
             "courses": ["DB1101 - Basic SQL"]
         }
@@ -285,7 +285,7 @@
         {
             "name": "izimport.com",
             "isActive": true,
-            "description": "Plataforma web que facilita el seguimiento de envíos de DHL y la cotización de importaciones simplificadas en Perú",
+            "description": "Plataforma web.Seguimiento de envíos y cotización de importaciones con el servicio de entrega rápida de DHL Express.",
             "highlights": ["Next.js", "React", "Shadcn", "API DHL"],
             "url": "https://izimport.vercel.app/",
             "github": "https://github.com/ivanmayta"
@@ -293,7 +293,7 @@
         {
             "name": "Importa Facil",
             "isActive": true,
-            "description": "Aplicación móvil que permite a los usuarios rastrear paquetes de DHL y cotizar importaciones simplificadas en Perú.",
+            "description": "Aplicación móvil para seguimiento de envíos y cotización de importaciones con el servicio de entrega rápida de DHL Express.",
             "highlights": [
                 "+100 descargas",
                 "kotlin",
@@ -307,7 +307,7 @@
         },
         {
             "name": "Perú Compras",
-            "description": "Data warehouse para optimizar la toma de decisiones, aumentar la transparencia y mejorar la eficiencia en la gestión de recursos públicos.",
+            "description": "Proyecto académico de inteligencia de negocios utilizando Power BI y un Data Warehouse para gestión pública.",
             "highlights": ["Business Intelligence", "Power BI", "ETL", "Dax"],
             "url": "https://iverse.vercel.app",
             "github": "https://github.com/ivanmayta"
