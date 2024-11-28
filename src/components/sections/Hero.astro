@@ -11,7 +11,7 @@ import Cv from "@/icons/Cv.astro"
 import WorldMap from "@/icons/WorldMap.astro"
 import type { SocialIcon } from "@/types"
 
-const { name, label, image, location, profiles, phone, email } = basics
+const { name, label, location, profiles, phone, email } = basics
 const { city, region } = location
 
 const SOCIAL_ICONS: SocialIcon = {
@@ -23,13 +23,13 @@ const SOCIAL_ICONS: SocialIcon = {
 }
 
 const linkedInfo = profiles.find(({ network }) => network === "LinkedIn")
-const linkedUrl = linkedInfo?.url
+//const linkedUrl = linkedInfo?.url
 
 const printInfo = [email, phone].filter(Boolean).join(" • ")
 const languagesInfo = languages
     .map(({ language, fluency }) => `${language} ${fluency}`)
     .join(" • ")
-const formatUrl = (url: string) => url.replace("https://", "")
+//const formatUrl = (url: string) => url.replace("https://", "")
 ---
 
 <Section>
