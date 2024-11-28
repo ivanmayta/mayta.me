@@ -66,6 +66,7 @@
             "url": "",
             "area": "Frontend Developer",
             "studyType": "Bachelor",
+            "startDate": "2024-01-01",
             "endDate": "2024-08-01",
             "score": "4.0",
             "courses": ["DB1101 - Basic SQL"]
@@ -76,7 +77,6 @@
             "area": "Ingenieria de Software",
             "studyType": "Bachelor",
             "startDate": "2021-01-01",
-
             "score": "4.0",
             "courses": ["DB1101 - Basic SQL"]
         },
