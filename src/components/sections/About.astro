@@ -2,18 +2,24 @@
 import Section from "../Section.astro"
 
 import { basics } from "@cv"
-const { summary } = basics
+const { summary, paragraphs } = basics
 ---
 
 <Section title="Sobre mí">
-    <p>
-        {summary}
-    </p>
-</Section>
+    <div class="about">
+        {paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+    </div>
 
-<style>
-    p {
-        font-size: 0.875rem;
-        line-height: 1.25;
-    }
-</style>
+    <style>
+        p {
+            margin-bottom: 6px;
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+        .about {
+            display: flex;
+            flex-direction: column;
+            gap: 0.1rem;
+        }
+    </style>
+</Section>

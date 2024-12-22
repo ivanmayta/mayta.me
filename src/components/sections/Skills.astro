@@ -20,63 +20,72 @@ import Android from "@/icons/android.astro"
 import Django from "@/icons/django.astro"
 import Python from "@/icons/python.astro"
 import Bootstrap from "@/icons/bootstrap.astro"
+import Strapi from "@/icons/strapi.astro"
+import Postgresql from "@/icons/postgresql.astro"
+import DigitalOcean from "@/icons/digitalOcean.astro"
+import AstroIcon from "@/icons/astroIcon.astro"
 
 const SKILLS_ICONS: Record<string, any> = {
-  HTML,
-  CSS,
-  JavaScript,
-  TypeScript,
-  React,
-  Node,
-  MySQL,
-  Git,
-  GitHub,
-  Next,
-  Tailwind,
-  Swift,
-  SwiftUI,
-  Kotlin,
-  Flutter,
-  Android, 
-  Django,
-  Python,
-  Bootstrap
+    Next,
+    HTML,
+    CSS,
+    JavaScript,
+    TypeScript,
+    React,
+    Node,
+    MySQL,
+    Git,
+    GitHub,
+    Tailwind,
+    Swift,
+    SwiftUI,
+    Kotlin,
+    Flutter,
+    Android,
+    Django,
+    Python,
+    Bootstrap,
+    Strapi,
+    Postgresql,
+    DigitalOcean,
+    Astro: AstroIcon,
 }
 ---
 
 <Section title="Habilidades">
-  <ul>
-    {
-      skills.map(({ name }) => {
-        const iconName = name === "Next.js" ? "Next" : name
-        const Icon = SKILLS_ICONS[iconName]
+    <ul>
+        {
+            skills.map(({ name }) => {
+                const iconName = name === "Next.js" ? "Next" : name
 
-        return (
-          <li>
-            {Icon && <Icon />} <span>{name}</span>
-          </li>
-        )
-      })
-    }
-  </ul>
+                const Icon = SKILLS_ICONS[iconName]
+
+                return (
+                    <li>
+                        {Icon && <Icon />} <span>{name}</span>
+                    </li>
+                )
+            })
+        }
+    </ul>
 </Section>
 
 <style>
-  ul {
-    display: inline-flex;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
+    ul {
+        display: inline-flex;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
 
-  li {
-    align-items: center;
-    background: #eee;
-    border-radius: 6px;
-    color: black;
-    display: flex;
-    font-size: 0.8rem;
-    font-weight: 500;
-    gap: 4px;
-    padding: 0.2rem 0.6rem;
-  }
+    li {
+        align-items: center;
+        background: #eee;
+        border-radius: 6px;
+        color: black;
+        display: flex;
+        font-size: 0.8rem;
+        font-weight: 500;
+        gap: 4px;
+        padding: 0.2rem 0.6rem;
+    }
 </style>

@@ -7,6 +7,7 @@ import Hero from "@/components/sections/Hero.astro"
 import Projects from "@/components/sections/Projects.astro"
 import Skills from "@/components/sections/Skills.astro"
 import KeyboardManager from "@/components/KeyboardManager.astro"
+import Experience from "@/components/sections/Experience.astro"
 
 import { basics } from "@cv"
 const { name, label } = basics
@@ -16,9 +17,9 @@ const { name, label } = basics
     <main>
         <Hero />
         <About />
-        <!-- <Experience /> -->
         <Projects />
         <!--<Languages />  -->
+        <Experience />
 
         <Skills />
         <Education />
@@ -29,7 +30,7 @@ const { name, label } = basics
 
 <style>
     main {
-        padding: 4rem;
+        padding: 2rem;
         margin: auto;
         width: 100%;
     }

@@ -1,12 +1,18 @@
 {
     "basics": {
         "name": "Ivan R. Mayta M.",
-        "label": "Frontend Developerpor por Oracle Next Education ☕",
+        "label": "Desarrollador de software ☕",
         "image": "/me.webp",
         "email": "ivan.mayta.dev@gmail.com",
         "phone": "+51 926786317",
         "url": "https://midu.dev",
-        "summary": "Desarrollador de software, actualmente enfocado en la web con tecnologías como React, Next.js y Astro. Para dispositivos móviles, Android Studio y Kotlin. \n Como estudiante de Ingeniería de Software, realicé proyectos con Python para la web (Django), desktop (Tkinter), algoritmos de inteligencia artificial para la optimización de sistemas de monitoreo ambiental, análisis de datos para Business Intelligence con Power BI, además de algoritmos y estructuras de datos.",
+        "summary": "Desarrollador de software, actualmente enfocado en la web con tecnologías como React, Next.js y Astro. Para dispositivos móviles, Android Studio y Kotlin. \n Como estudiante de Ingeniería de Software, realicé proyectos con Python /n para la web (Django), desktop (Tkinter), algoritmos de inteligencia artificial para la optimización de sistemas de monitoreo ambiental, análisis de datos para Business Intelligence con Power BI, además de algoritmos y estructuras de datos.",
+        "paragraphs": [
+            "Desarrollador de software,actualmente enfocado en la web con tecnologías como React, Next.js y Astro.",
+            "Como Ingeniero de Software, realicé proyectos con Python y Django para la web, librerias como tkinter y PyQT para desktop , algoritmos de inteligencia artificial, diseño de base de datos, análisis de datos para Business Intelligence con Power BI, además de algoritmos y estructuras de datos.",
+            "Logré completar con éxito el programa del Bachillerato Internacional. Obteniendo buen puntaje en Ingles y tecnología.",
+            "Frontend Developer con React por Oracle Next Education. "
+        ],
         "location": {
             "address": "",
             "postalCode": "23004",
@@ -28,8 +34,8 @@
             },
             {
                 "network": "Portafolio",
-                "username": "iverse.vercel.app",
-                "url": "https://iverse.vercel.app"
+                "username": "iverse.dev",
+                "url": "https://iverse.dev"
             },
             {
                 "network": "Cv",
@@ -40,12 +46,12 @@
     },
     "work": [
         {
-            "name": "Company",
-            "position": "Web Developer",
-            "url": "company.com",
-            "startDate": "2021-01-01",
+            "name": "jsconf.es",
+            "position": "🎊Evento de desarrollo web con Javascript. Organizado por Midudev",
+            "url": "https://www.jsconf.es/",
+            "startDate": "",
             "endDate": null,
-            "summary": "Doing what",
+            "summary": "Mejorar el diseño de la web en base a un Figma",
             "highlights": ["Started the company"]
         }
     ],
@@ -119,82 +125,14 @@
     ],
     "skills": [
         {
-            "name": "HTML",
-            "level": "Master",
-            "keywords": ["Desarrollo Web", "Frontend"]
-        },
-        {
-            "name": "CSS",
-            "level": "Master",
-            "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"]
-        },
-        {
-            "name": "JavaScript",
-            "level": "Master",
-            "keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack"]
-        },
-        {
-            "name": "Tailwind",
+            "name": "Astro",
             "level": "Avanzado",
             "keywords": [
                 "Desarrollo Web",
                 "Frontend",
-                "CSS Framework",
-                "Diseño Responsive"
-            ]
-        },
-        {
-            "name": "Bootstrap",
-            "level": "Avanzado",
-            "keywords": [
-                "Desarrollo Web",
-                "Frontend",
-                "CSS Framework",
-                "Diseño Responsive"
-            ]
-        },
-        {
-            "name": "TypeScript",
-            "level": "Avanzado",
-            "keywords": [
-                "Desarrollo Web",
-                "Frontend",
-                "Backend",
-                "JavaScript Superset"
-            ]
-        },
-        {
-            "name": "Node",
-            "level": "Avanzado",
-            "keywords": ["Desarrollo Web", "Backend", "JavaScript", "Servidor"]
-        },
-        {
-            "name": "MySQL",
-            "level": "Avanzado",
-            "keywords": [
-                "Bases de Datos",
-                "SQL",
-                "Almacenamiento de Datos",
-                "Backend"
-            ]
-        },
-        {
-            "name": "Git",
-            "level": "Avanzado",
-            "keywords": [
-                "Control de Versiones",
-                "Colaboración",
-                "Código Fuente"
-            ]
-        },
-        {
-            "name": "GitHub",
-            "level": "Avanzado",
-            "keywords": [
-                "Control de Versiones",
-                "Colaboración",
-                "Código Fuente",
-                "Git"
+                "React Framework",
+                "SSR",
+                "Static Generation"
             ]
         },
         {
@@ -218,6 +156,92 @@
                 "UI"
             ]
         },
+        {
+            "name": "Tailwind",
+            "level": "Avanzado",
+            "keywords": [
+                "Desarrollo Web",
+                "Frontend",
+                "CSS Framework",
+                "Diseño Responsive"
+            ]
+        },
+        {
+            "name": "TypeScript",
+            "level": "Avanzado",
+            "keywords": [
+                "Desarrollo Web",
+                "Frontend",
+                "Backend",
+                "JavaScript Superset"
+            ]
+        },
+        {
+            "name": "Strapi",
+            "level": "Avanzado",
+            "keywords": [
+                "Desarrollo Web",
+                "Frontend",
+                "Backend",
+                "JavaScript Superset"
+            ]
+        },
+        {
+            "name": "Postgresql",
+            "level": "Avanzado",
+            "keywords": [
+                "Desarrollo Web",
+                "Frontend",
+                "Backend",
+                "JavaScript Superset"
+            ]
+        },
+        {
+            "name": "DigitalOcean",
+            "level": "Avanzado",
+            "keywords": [
+                "Desarrollo Web",
+                "Frontend",
+                "Backend",
+                "JavaScript Superset"
+            ]
+        },
+        {
+            "name": "Git",
+            "level": "Avanzado",
+            "keywords": [
+                "Control de Versiones",
+                "Colaboración",
+                "Código Fuente"
+            ]
+        },
+        {
+            "name": "GitHub",
+            "level": "Avanzado",
+            "keywords": [
+                "Control de Versiones",
+                "Colaboración",
+                "Código Fuente",
+                "Git"
+            ]
+        },
+
+        {
+            "name": "Node",
+            "level": "Avanzado",
+            "keywords": ["Desarrollo Web", "Backend", "JavaScript", "Servidor"]
+        },
+        {
+            "name": "MySQL",
+            "level": "Avanzado",
+            "keywords": [
+                "Bases de Datos",
+                "SQL",
+                "Almacenamiento de Datos",
+                "Backend"
+            ]
+        },
+
         {
             "name": "Kotlin",
             "level": "Avanzado",
@@ -257,6 +281,32 @@
                 "JavaScript Library",
                 "UI"
             ]
+        },
+        {
+            "name": "HTML",
+            "level": "Master",
+            "keywords": ["Desarrollo Web", "Frontend"]
+        },
+        {
+            "name": "CSS",
+            "level": "Master",
+            "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"]
+        },
+        {
+            "name": "JavaScript",
+            "level": "Master",
+            "keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack"]
+        },
+
+        {
+            "name": "Bootstrap",
+            "level": "Avanzado",
+            "keywords": [
+                "Desarrollo Web",
+                "Frontend",
+                "CSS Framework",
+                "Diseño Responsive"
+            ]
         }
     ],
     "languages": [
@@ -266,7 +316,7 @@
         },
         {
             "language": "Ingles",
-            "fluency": "B1"
+            "fluency": "B2"
         }
     ],
     "interests": [
@@ -285,15 +335,22 @@
         {
             "name": "izimport.com",
             "isActive": true,
-            "description": "Plataforma web.Seguimiento de envíos y cotización de importaciones con el servicio de entrega rápida de DHL Express.",
-            "highlights": ["Next.js", "React", "Shadcn", "API DHL"],
-            "url": "https://izimport.vercel.app/",
+            "description": "📦 Seguimiento de envios internacionales por DHL Express y cotización de importaciones.",
+            "highlights": [
+                "Next.js",
+                "React",
+                "zustand",
+                "Shadcn",
+                "API DHL",
+                "Api Exchange Rates"
+            ],
+            "url": "https://izimport.com/",
             "github": "https://github.com/ivanmayta"
         },
         {
             "name": "Importa Facil",
             "isActive": true,
-            "description": "Aplicación móvil para seguimiento de envíos y cotización de importaciones con el servicio de entrega rápida de DHL Express.",
+            "description": "✈️ Seguimiento de envios internacionales por DHL Express y cotización de importaciones",
             "highlights": [
                 "+100 descargas",
                 "kotlin",
@@ -303,6 +360,22 @@
                 "Api Exchange Rates"
             ],
             "url": "https://play.google.com/store/apps/details?id=com.importa.facil",
+            "github": "https://github.com/ivanmayta"
+        },
+        {
+            "name": "iSummary",
+            "isActive": true,
+            "description": "🎬 Generador de resumenes para videos de youtube con inteligencia artificial",
+            "highlights": [
+                "Next.js",
+                "React",
+                "Shadcn",
+                "strapi",
+                "Digital Ocean",
+                "postgreSQL",
+                "Gemini"
+            ],
+            "url": "https://isummarize.vercel.app/",
             "github": "https://github.com/ivanmayta"
         },
         {
