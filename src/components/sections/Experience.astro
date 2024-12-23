@@ -1,7 +1,8 @@
 ---
+import type { Work } from "@/cv"
 import Section from "../Section.astro"
 
-import { work } from "@cv"
+const { experience: work } = Astro.props as { experience: Work[] }
 ---
 
 <Section title="Contribuciones ">

@@ -1,5 +1,8 @@
 ---
-import { basics } from "@cv"
+import LanguagePicker from "@/components/LanguagePicker.astro"
+import type { Basics } from "@/cv"
+import { getLangFromUrl, useTranslations } from "@/i18n/utils"
+import { ViewTransitions } from "astro:transitions"
 
 interface Props {
     title: string
@@ -7,11 +10,15 @@ interface Props {
 
 const { title } = Astro.props
 
-const { image, summary, url } = basics
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+
+const basics = t("basics") as Basics
+const { summary, image, url } = basics
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={lang}>
     <head>
         <meta charset="UTF-8" />
         <title>{title}</title>
@@ -32,9 +39,12 @@ const { image, summary, url } = basics
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={summary} />
         <meta name="twitter:image" content="" />
+        <ViewTransitions />
     </head>
     <body>
-        <slot />
+        <LanguagePicker />
+
+        <slot transition:animate="fade" />
     </body>
 </html>
 
@@ -129,5 +139,30 @@ const { image, summary, url } = basics
         article {
             break-inside: avoid;
         }
+    }
+
+    @keyframes typeWriter {
+        0% {
+            width: 0;
+            opacity: 1;
+        }
+        100% {
+            width: 100%;
+            opacity: 1;
+        }
+    }
+
+    slot {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 0; /* Inicia con el texto oculto */
+        animation: typeWriter 2s steps(30) 1s forwards; /* 2s es el tiempo de la animación */
+        font-family: "Courier New", Courier, monospace; /* Estilo de fuente tipo máquina de escribir */
+    }
+
+    /* Esto asegura que cada letra aparece como si se estuviera escribiendo */
+    slot[transition-state="entering"] {
+        animation-name: typeWriter;
     }
 </style>
