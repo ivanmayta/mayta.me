@@ -25,7 +25,7 @@ import DigitalOcean from "@/icons/digitalOcean.astro"
 import AstroIcon from "@/icons/astroIcon.astro"
 import type { Skills } from "@/cv"
 
-const { skills } = Astro.props as { skills: Skills[] }
+const { skills, title } = Astro.props as { skills: Skills[]; title: string }
 
 const SKILLS_ICONS: Record<string, any> = {
     Next,
@@ -54,7 +54,7 @@ const SKILLS_ICONS: Record<string, any> = {
 }
 ---
 
-<Section title="Habilidades">
+<Section title={title ? title : "Habilidades"}>
     <ul>
         {
             skills.map(({ name }) => {

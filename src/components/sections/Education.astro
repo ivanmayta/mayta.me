@@ -2,10 +2,13 @@
 import Section from "../Section.astro"
 import type { Education } from "@/cv"
 
-const { education } = Astro.props as { education: Education[] }
+const { education, title } = Astro.props as {
+    education: Education[]
+    title: string
+}
 ---
 
-<Section title="Educación">
+<Section title={title ? title : "Educación"}>
     <ul>
         {
             education.map(({ institution, startDate, endDate, area }) => {

@@ -2,10 +2,13 @@
 import type { Work } from "@/cv"
 import Section from "../Section.astro"
 
-const { experience: work } = Astro.props as { experience: Work[] }
+const { experience: work, title } = Astro.props as {
+    experience: Work[]
+    title: string
+}
 ---
 
-<Section title="Contribuciones ">
+<Section title={title ? title : "Contribuciones"}>
     <ul>
         {
             work.map(({ name, startDate, endDate, position, summary, url }) => {

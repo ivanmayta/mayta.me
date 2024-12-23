@@ -2,10 +2,13 @@
 import GitHub from "@/icons/GitHub.astro"
 import Section from "../Section.astro"
 import type { Projects } from "@/cv"
-const { projects } = Astro.props as { projects: Projects[] }
+const { projects, title } = Astro.props as {
+    projects: Projects[]
+    title: string
+}
 ---
 
-<Section title="Proyectos">
+<Section title={title ? title : "Proyectos"}>
     <ul>
         {
             projects.map(
