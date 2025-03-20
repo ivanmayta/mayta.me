@@ -6,12 +6,12 @@
         "email": "ivan.mayta.dev@gmail.com",
         "phone": "+51 926786317",
         "url": "https://midu.dev",
-        "summary": "Desarrollador de software, actualmente enfocado en la web con tecnologías como React, Next.js y Astro.",
+        "summary": "Desarrollador de software, actualmente enfocado en la web con tecnologías como Astro, Nextjs y React",
         "paragraphs": [
-            "Desarrollador de software,actualmente enfocado en la web con tecnologías como React, Next.js y Astro.",
-            "Como Ingeniero de Software, realicé proyectos con Python y Django para la web, librerias como tkinter y PyQT para desktop , algoritmos de inteligencia artificial, diseño de base de datos, análisis de datos para Business Intelligence con Power BI, además de algoritmos y estructuras de datos.",
-            "Logré completar con éxito el programa del Bachillerato Internacional. Obteniendo buen puntaje en Ingles y tecnología.",
-            "Frontend Developer con React por Oracle Next Education. "
+            "Desarrollador de software,actualmente enfocado en la web con tecnologías como Astro, Nextjs y React.",
+            "Frontend Developer con React por Oracle Next Education. ",
+            "Buen desempeño en Inglés y Tecnología en el programa del Bachillerato Internacional",
+            "Como Ingeniero de Software, diseñé y desarrollé aplicaciones web, de escritorio y videojuegos, implementé soluciones de inteligencia artificial, optimicé bases de datos, generé informes de Business Intelligence y resolví problemas complejos mediante algoritmos y estructuras de datos eficientes."
         ],
         "location": {
             "address": "",
@@ -335,16 +335,17 @@
         {
             "name": "izimport.com",
             "isActive": true,
-            "description": "📦 Seguimiento de envios internacionales por DHL Express y cotización de importaciones.",
+            "description": "📦 Plataforma de catálogo de productos de comercio electrónico para empresas B2B y B2C.",
             "highlights": [
                 "Next.js",
+                "Supabase",
                 "React",
                 "zustand",
                 "Shadcn",
                 "API DHL",
                 "Api Exchange Rates"
             ],
-            "url": "https://izimport.com/",
+            "url": "https://iverse.dev/projects/izimport-com",
             "github": "https://github.com/ivanmayta"
         },
         {
@@ -359,7 +360,7 @@
                 "Api DHL",
                 "Api Exchange Rates"
             ],
-            "url": "https://play.google.com/store/apps/details?id=com.importa.facil",
+            "url": "https://iverse.dev/projects/importa-facil",
             "github": "https://github.com/ivanmayta"
         },
         {
@@ -375,14 +376,14 @@
                 "postgreSQL",
                 "Gemini"
             ],
-            "url": "https://isummarize.vercel.app/",
+            "url": "https://iverse.dev/projects/isummarize",
             "github": "https://github.com/ivanmayta"
         },
         {
             "name": "Perú Compras",
             "description": "Proyecto académico de inteligencia de negocios utilizando Power BI y un Data Warehouse para gestión pública.",
             "highlights": ["Business Intelligence", "Power BI", "ETL", "Dax"],
-            "url": "https://iverse.vercel.app",
+            "url": "https://iverse.dev/projects/peru-compras",
             "github": "https://github.com/ivanmayta"
         }
     ]
