@@ -364,6 +364,22 @@
             "github": "https://github.com/ivanmayta"
         },
         {
+            "name": "probusiness.pe",
+            "isActive": true,
+            "description": "🎬 Landing page de la empresa importadora Probusiness",
+            "highlights": ["Astro"],
+            "url": "https://iverse.dev/projects/probusiness-pe",
+            "github": "https://github.com/ivanmayta"
+        },
+        {
+            "name": "ssomacal.com",
+            "isActive": true,
+            "description": "🎬 Landing para la empresa de SEGURIDAD, SALUD OCUPACIONAL, MEDIO AMBIENTE Y CALIDAD (ssomacal).",
+            "highlights": ["Astro"],
+            "url": "https://iverse.dev/projects/ssomacal-pe",
+            "github": "https://github.com/ivanmayta"
+        },
+        {
             "name": "iSummary",
             "isActive": true,
             "description": "🎬 Generador de resumenes para videos de youtube con inteligencia artificial",
