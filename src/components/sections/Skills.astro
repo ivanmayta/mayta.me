@@ -23,6 +23,7 @@ import Strapi from "@/icons/strapi.astro"
 import Postgresql from "@/icons/postgresql.astro"
 import DigitalOcean from "@/icons/digitalOcean.astro"
 import AstroIcon from "@/icons/astroIcon.astro"
+import Supabase from "@/icons/supabase.astro"
 import type { Skills } from "@/cv"
 
 const { skills, title } = Astro.props as { skills: Skills[]; title: string }
@@ -51,6 +52,7 @@ const SKILLS_ICONS: Record<string, any> = {
     Postgresql,
     DigitalOcean,
     Astro: AstroIcon,
+    Supabase,
 }
 ---
 
