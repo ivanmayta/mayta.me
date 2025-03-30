@@ -375,11 +375,10 @@
             "github": "https://github.com/ivanmayta"
         },
         {
-            "name": "probusiness.pe",
-            "isActive": true,
-            "description": "🎬 Landing page de la empresa importadora Probusiness",
-            "highlights": ["Astro"],
-            "url": "https://iverse.dev/projects/probusiness-pe",
+            "name": "Perú Compras",
+            "description": "Proyecto académico de inteligencia de negocios utilizando Power BI y un Data Warehouse para gestión pública.",
+            "highlights": ["Business Intelligence", "Power BI", "ETL", "Dax"],
+            "url": "https://iverse.dev/projects/peru-compras",
             "github": "https://github.com/ivanmayta"
         },
         {
@@ -406,11 +405,13 @@
             "url": "https://iverse.dev/projects/isummarize",
             "github": "https://github.com/ivanmayta"
         },
+
         {
-            "name": "Perú Compras",
-            "description": "Proyecto académico de inteligencia de negocios utilizando Power BI y un Data Warehouse para gestión pública.",
-            "highlights": ["Business Intelligence", "Power BI", "ETL", "Dax"],
-            "url": "https://iverse.dev/projects/peru-compras",
+            "name": "probusiness.pe",
+            "isActive": true,
+            "description": "🎬 Landing page de la empresa importadora Probusiness",
+            "highlights": ["Astro"],
+            "url": "https://iverse.dev/projects/probusiness-pe",
             "github": "https://github.com/ivanmayta"
         }
     ]
