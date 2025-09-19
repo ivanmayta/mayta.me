@@ -19,36 +19,40 @@ const { experience: work, title } = Astro.props as {
                 return (
                     <li>
                         <article>
-                            <header>
-                                <div>
-                                    <h3>
-                                        <a
-                                            href={url}
-                                            title={`Ver ${name}`}
-                                            target="_blank"
-                                        >
-                                            {name}
-                                        </a>
-                                    </h3>
-                                    <h4>{position}</h4>
+                            <div class="rounded-lg bg-card text-card-foreground">
+                                <div class="flex flex-col space-y-1.5">
+                                    <div class="flex items-center justify-between gap-x-2 text-base">
+                                        <h3 class="font-semibold leading-none">
+                                            <a
+                                                class="hover:underline"
+                                                href={url}
+                                                title={`Ver ${name}`}
+                                                target="_blank"
+                                            >
+                                                {name}
+                                            </a>
+                                        </h3>
+                                        <div>
+                                            <time
+                                                datetime={startDate}
+                                                data-title={startDate}
+                                            >
+                                                {startYear}
+                                            </time>
+                                            {" - "}
+                                            <time
+                                                datetime={endDate}
+                                                data-title={endDate}
+                                            >
+                                                {endYear}
+                                            </time>
+                                        </div>
+                                    </div>
+                                    <h4 class="text-pretty font-mono text-sm mt-2 text-foreground/80 print:text-[12px]">
+                                        {position}
+                                    </h4>
                                 </div>
-
-                                <div>
-                                    <time
-                                        datetime={startDate}
-                                        data-title={startDate}
-                                    >
-                                        {startYear}
-                                    </time>
-                                    {" - "}
-                                    <time
-                                        datetime={endDate}
-                                        data-title={endDate}
-                                    >
-                                        {endYear}
-                                    </time>
-                                </div>
-                            </header>
+                            </div>
 
                             <footer>
                                 <p>{summary}</p>
@@ -60,83 +64,3 @@ const { experience: work, title } = Astro.props as {
         }
     </ul>
 </Section>
-
-<style>
-    ul {
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
-    }
-
-    article h3 {
-        font-weight: 500;
-        color: #111;
-    }
-
-    article a {
-        color: #111;
-    }
-
-    article a:hover {
-        text-decoration: underline;
-    }
-
-    article h4 {
-        color: #222;
-        font-weight: 400;
-    }
-
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 4px;
-    }
-
-    time {
-        color: #555;
-        font-size: 0.85rem;
-        min-width: 102px;
-        cursor: default;
-    }
-
-    [data-title]:hover:after {
-        opacity: 1;
-        transition: all 0.1s ease-in-out 0.5s;
-        visibility: visible;
-    }
-
-    [data-title]:after {
-        content: attr(data-title);
-        background-color: #333;
-        color: #fff;
-        font-size: 0.75rem;
-        font-family:
-            Menlo,
-            Monaco,
-            Lucida Console,
-            "Courier New",
-            monospace;
-        position: absolute;
-        padding: 0.2rem 0.5rem;
-        bottom: -1.4rem;
-        left: 50%;
-        white-space: nowrap;
-        box-shadow: 1px 1px 1px #222222;
-        opacity: 0;
-        border: 1px solid #111111;
-        z-index: 99999;
-        visibility: hidden;
-        border-radius: 6px;
-    }
-
-    [data-title] {
-        position: relative;
-    }
-
-    @media (width <= 700px) {
-        time {
-            text-align: right;
-        }
-    }
-</style>

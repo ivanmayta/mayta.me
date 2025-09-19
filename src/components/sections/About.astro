@@ -7,21 +7,22 @@ const { paragraphs, title } = Astro.props as {
 }
 ---
 
-<Section title={title ? title : "Sobre mi"}>
+<Section title={title ? title : ""}>
     <div class="about">
         {paragraphs.map((paragraph) => <p>{paragraph}</p>)}
     </div>
 
     <style>
         p {
-            margin-bottom: 6px;
+            color: hsl(224 71.4% 4.1%);
+            text-wrap: pretty;
             font-size: 0.875rem;
-            line-height: 1.5;
+            line-height: 1.25rem;
         }
         .about {
             display: flex;
             flex-direction: column;
-            gap: 0.1rem;
+            gap: 1lh;
         }
     </style>
 </Section>

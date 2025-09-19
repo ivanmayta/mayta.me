@@ -131,6 +131,7 @@ interface Projects {
     highlights: Highlight
     url: string
     github?: string
+    technologies?: Array<string>
 }
 
 interface Interests {

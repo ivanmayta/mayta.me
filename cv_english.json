@@ -1,15 +1,14 @@
 {
     "basics": {
         "name": "Ivan R. Mayta M.",
-        "label": "Software Developer ☕",
-        "image": "/me.webp",
+        "label": "",
+        "image": "/logo.png",
         "email": "ivan.mayta.dev@gmail.com",
         "phone": "+51 926786317",
         "url": "https://midu.dev",
-        "summary": "Software developer currently focused on web technologies such as React, Next.js, and Astro.",
+        "summary": "Fullstack developer currently focused on web technologies such as React, Next.js, and Astro.",
         "paragraphs": [
-            "Software developer currently focused on web technologies such as React, Next.js, and Astro.",
-            "As a Software Engineer, I worked on projects using Python and Django for the web, libraries like Tkinter and PyQt for desktop applications, artificial intelligence algorithms, database design, data analysis for Business Intelligence with Power BI, as well as algorithms and data structures.",
+            "Fullstack Developer focused on frontend, specialized in high-performance React applications. Experience in collaborative work methodologies such as SCRUM. Knowledge in artificial intelligence (AI), business intelligence (BI), algorithms, data structures, mobile, desktop and video game development.",
             "Successfully completed the International Baccalaureate , achieving high scores in English and technology.",
             "Frontend Developer with React certified by Oracle Next Education."
         ],
@@ -333,14 +332,20 @@
         {
             "name": "izimport.com",
             "isActive": true,
-            "description": "📦 Tracking international shipments via DHL Express and import cost estimation.",
+            "description": "Tracking international shipments via DHL Express and import cost estimation.",
             "highlights": [
+                "Use of ISR (Incremental Static Regeneration) to update product catalogs",
+                "Integration of the DHL API for international shipment tracking",
+                "Integration of the Exchange Rates API to obtain exchange rates"
+            ],
+            "technologies": [
+                "Startup",
                 "Next.js",
+                "Supabase",
                 "React",
-                "zustand",
-                "Shadcn",
-                "DHL API",
-                "Exchange Rates API"
+                "Clerk",
+                "cloudinary",
+                "zustand"
             ],
             "url": "https://izimport.com/",
             "github": "https://github.com/ivanmayta"
@@ -348,38 +353,28 @@
         {
             "name": "Importa Facil",
             "isActive": true,
-            "description": "✈️ Tracking international shipments via DHL Express and import cost estimation.",
+            "description": "Tracking international shipments via DHL Express and import cost estimation.",
             "highlights": [
-                "+100 downloads",
+                "+100 downloads in Google Play Store",
+                "Tracking international shipments via DHL Express and import cost estimation"
+            ],
+            "technologies": [
                 "Kotlin",
                 "Android Studio",
-                "Retrofit",
-                "DHL API",
-                "Exchange Rates API"
+                "React-Native-version"
             ],
             "url": "https://play.google.com/store/apps/details?id=com.importa.facil",
             "github": "https://github.com/ivanmayta"
         },
-        {
-            "name": "iSummary",
-            "isActive": true,
-            "description": "🎬 AI-powered summary generator for YouTube videos.",
-            "highlights": [
-                "Next.js",
-                "React",
-                "Shadcn",
-                "Strapi",
-                "Digital Ocean",
-                "PostgreSQL",
-                "Gemini"
-            ],
-            "url": "https://isummarize.vercel.app/",
-            "github": "https://github.com/ivanmayta"
-        },
+
         {
             "name": "Perú Compras",
             "description": "Academic business intelligence project using Power BI and a Data Warehouse for public management.",
-            "highlights": ["Business Intelligence", "Power BI", "ETL", "DAX"],
+            "highlights": [
+                "Generation of reports for public management",
+                "Data Warehouse for public management"
+            ],
+            "technologies": ["Power BI", "ETL", "DAX"],
             "url": "https://iverse.vercel.app",
             "github": "https://github.com/ivanmayta"
         }

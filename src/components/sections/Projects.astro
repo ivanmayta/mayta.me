@@ -9,34 +9,54 @@ const { projects, title } = Astro.props as {
 ---
 
 <Section title={title ? title : "Proyectos"}>
-    <ul>
-        {
-            projects
-                .slice(0, 4)
-                .map(
-                    ({
-                        url,
-                        description,
-                        highlights,
-                        name,
-                        isActive,
-                        github,
-                    }) => {
-                        return (
-                            <li>
-                                <article>
-                                    <header>
-                                        <h3>
+    {
+        projects
+            .slice(0, 4)
+            .map(
+                ({
+                    url,
+                    description,
+                    highlights,
+                    name,
+                    isActive,
+                    github,
+                    technologies,
+                }) => {
+                    return (
+                        <article class="mt-4">
+                            <div class="rounded-lg bg-card text-card-foreground py-1 print:py-0">
+                                <div class="flex flex-col space-y-1.5 print:space-y-1">
+                                    <div class="flex items-center justify-between gap-x-2 text-base">
+                                        <h3 class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none print:text-sm">
                                             <a
+                                                class="hover:underline"
                                                 href={url}
                                                 target="_blank"
                                                 title={`Ver el proyecto ${name}`}
                                             >
                                                 {name}
                                             </a>
-                                            {isActive && <span>•</span>}
+                                            <ul class="list-none p-0 hidden gap-x-1 sm:inline-flex">
+                                                {technologies?.map(
+                                                    (technology) => {
+                                                        return (
+                                                            <li class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs print:px-1 print:py-0.5 print:text-[8px] print:leading-tight">
+                                                                {technology}
+                                                            </li>
+                                                        )
+                                                    }
+                                                )}
+                                            </ul>
+                                        </h3>
+                                        <div class="flex items-center justify-center gap-x-2">
+                                            {isActive && (
+                                                <span class="animate-pulse text-green-500 ">
+                                                    •
+                                                </span>
+                                            )}
                                             {github && (
                                                 <a
+                                                    class:list="text-sm tabular-nums text-gray-500"
                                                     class="github-code-link"
                                                     href={github}
                                                     target="_blank"
@@ -45,130 +65,28 @@ const { projects, title } = Astro.props as {
                                                     <GitHub />
                                                 </a>
                                             )}
-                                        </h3>
-                                        <p>{description}</p>
-                                    </header>
-                                    <footer>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-pretty font-mono text-xs text-muted-foreground">
+                                <div class="mt-2 text-sm text-foreground/80 print:mt-1 print:text-[10px] text-pretty">
+                                    {description}
+                                    <ul class="list-inside list-disc">
                                         {highlights.map((highlight) => {
-                                            return <span>{highlight}</span>
+                                            return <li>{highlight}</li>
                                         })}
-                                    </footer>
-                                </article>
-                            </li>
-                        )
-                    }
-                )
-        }
-    </ul>
-    <a class="seeMore" href="https://iverse.dev/projects" target="_blank"
-        >Ver más: iverse.dev/projects</a
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    )
+                }
+            )
+    }
+    <a
+        class="float-right text-sm hover:underline"
+        href="https://iverse.dev/projects"
+        target="_blank">Ver más</a
     >
 </Section>
-
-<style>
-    .seeMore {
-        display: flex;
-        justify-content: center;
-        font-size: 0.8rem;
-        color: #111;
-        text-decoration: underline;
-        margin-bottom: 8px;
-    }
-    ul {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        margin-inline: -16px;
-    }
-
-    article {
-        border-radius: 8px;
-        border: 0px solid #f2f2f2;
-        gap: 0px;
-        display: flex;
-        flex-direction: column;
-        padding: 16px;
-        padding-bottom: 16px;
-        padding-top: 0px;
-        height: 100%;
-    }
-
-    article header {
-        flex: 1;
-    }
-
-    article h3 {
-        margin-bottom: 4px;
-    }
-
-    article a {
-        color: #111;
-    }
-
-    article a:hover {
-        text-decoration: underline;
-    }
-
-    article p {
-        font-size: 0.75rem;
-        line-height: 1.2rem;
-        margin-bottom: 4px;
-    }
-
-    article h3 span {
-        color: rgb(0, 188, 47);
-        animation-name: flicker;
-        animation-duration: 3s;
-        animation-timing-function: ease-in;
-        animation-iteration-count: infinite;
-    }
-
-    footer {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 4px;
-        font-size: 0.6rem;
-    }
-
-    footer span {
-        border-radius: 6px;
-        background: #eee;
-        color: #444;
-        font-size: 0.6rem;
-        font-weight: 500;
-        padding: 0.2rem 0.6rem;
-    }
-
-    .github-code-link {
-        margin-left: 5px;
-    }
-
-    @keyframes flicker {
-        0% {
-            opacity: 1;
-        }
-        50% {
-            opacity: 0.25;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-
-    @media (width <= 700px) {
-        ul {
-            margin-inline: 0px;
-        }
-
-        article {
-            border: none;
-            box-shadow: 0 1px 1px #f2f2f2;
-            padding: 0 0 16px 0;
-        }
-    }
-
-    @media print {
-        article h3 span {
-            animation-name: none;
-        }
-    }
-</style>

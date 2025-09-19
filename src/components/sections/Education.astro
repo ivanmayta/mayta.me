@@ -9,7 +9,7 @@ const { education, title } = Astro.props as {
 ---
 
 <Section title={title ? title : "Educación"}>
-    <ul>
+    <ul class="flex flex-col gap-2">
         {
             education.map(({ institution, startDate, endDate, area }) => {
                 //const startYear = new Date(startDate).getFullYear()
@@ -21,17 +21,19 @@ const { education, title } = Astro.props as {
 
                 return (
                     <li>
-                        <article>
-                            <header>
-                                <div>
-                                    <h3>{institution}</h3>
+                        <article class="rounded-lg bg-card text-card-foreground">
+                            <header class="flex items-center justify-between gap-x-2 text-base">
+                                <div class="">
+                                    <h3 class="font-semibold leading-none">
+                                        {institution}
+                                    </h3>
                                 </div>
 
-                                <time>{endYear}</time>
+                                <time class="text-xs">{endYear}</time>
                             </header>
 
                             <footer>
-                                <p>{area}</p>
+                                <p class="">{area}</p>
                             </footer>
                         </article>
                     </li>
@@ -40,37 +42,3 @@ const { education, title } = Astro.props as {
         }
     </ul>
 </Section>
-
-<style>
-    ul {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    article h3 {
-        font-weight: 500;
-        color: #111;
-    }
-
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        align-items: flex-start;
-        margin-bottom: 4px;
-    }
-
-    time {
-        text-align: center;
-        color: #555;
-        font-size: 0.85rem;
-        min-width: 102px;
-    }
-
-    @media (width <= 700px) {
-        time {
-            text-align: right;
-        }
-    }
-</style>

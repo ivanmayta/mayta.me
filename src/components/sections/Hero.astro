@@ -8,7 +8,6 @@ import LinkedIn from "@/icons/LinkedIn.astro"
 import GitHub from "@/icons/GitHub.astro"
 import Portafolio from "@/icons/Portafolio.astro"
 import Cv from "@/icons/Cv.astro"
-import WorldMap from "@/icons/WorldMap.astro"
 import type { SocialIcon } from "@/types"
 import type { Basics, Languages } from "@/cv"
 
@@ -17,7 +16,7 @@ const { basics, languages } = Astro.props as {
     languages: Languages[]
 }
 
-const { name, label, location, profiles, phone, email } = basics
+const { name, label, location, profiles, phone, email, image } = basics
 const { city, region } = location
 const SOCIAL_ICONS: SocialIcon = {
     GitHub,
@@ -37,17 +36,23 @@ const languagesInfo = languages
 //const formatUrl = (url: string) => url.replace("https://", "")
 ---
 
-<Section>
+<Section hasDivider={false}>
     <div class="container">
         <div class="info">
             <h1>{name}</h1>
             <h2>{label}</h2>
-            <p>{printInfo}</p>
-            <p>{languagesInfo}</p>
-            <span>
-                <WorldMap />
-                {city}, {region}
-            </span>
+            <p class="text-black">
+                {region}
+                {" • " + printInfo}
+                {" • " + languagesInfo}
+
+                {
+                    /* 
+                    <WorldMap />
+                    {city},
+                        */
+                }
+            </p>
             <span class="print_urls">
                 {
                     profiles.map(({ network, url, username }) => {
@@ -114,11 +119,10 @@ const languagesInfo = languages
                 }
             </footer>
         </div>
-        <!-- 
-    <figure>
-      <img src={image} alt={name} />
-    </figure>
-  -->
+
+        <figure>
+            <img src={image} alt={name} />
+        </figure>
     </div>
 </Section>
 
@@ -139,8 +143,8 @@ const languagesInfo = languages
 
     .info {
         display: flex;
-        text-align: center;
-        align-items: center;
+        text-align: left;
+        align-items: flex-start;
         flex-direction: column;
         gap: 0rem;
         padding-right: 32px;
