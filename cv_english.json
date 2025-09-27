@@ -347,7 +347,7 @@
                 "cloudinary",
                 "zustand"
             ],
-            "url": "https://izimport.com/",
+            "url": "https://izimport.site",
             "github": "https://github.com/ivanmayta"
         },
         {
@@ -375,7 +375,7 @@
                 "Data Warehouse for public management"
             ],
             "technologies": ["Power BI", "ETL", "DAX"],
-            "url": "https://iverse.vercel.app",
+            "url": "https://iverse.dev",
             "github": "https://github.com/ivanmayta"
         }
     ]

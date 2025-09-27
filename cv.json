@@ -337,7 +337,7 @@
     ],
     "projects": [
         {
-            "name": "izimport.com",
+            "name": "izimport.site",
             "isActive": true,
             "description": "Plataforma de catálogo de productos de comercio electrónico para empresas B2B y B2C.",
             "highlights": [
@@ -354,7 +354,7 @@
                 "cloudinary",
                 "zustand"
             ],
-            "url": "https://iverse.dev/projects/izimport-com",
+            "url": "https://izimport.site",
             "github": "https://github.com/ivanmayta"
         },
         {
@@ -385,7 +385,7 @@
                 "100% de accesibilidad, performance y SEO"
             ],
             "technologies": ["Freelance", "Astro", "Tailwind", "JavaScript"],
-            "url": "https://iverse.dev/projects/ssomacal-pe",
+            "url": "https://ssomacal-pe.vercel.app",
             "github": "https://github.com/ivanmayta"
         }
     ]
