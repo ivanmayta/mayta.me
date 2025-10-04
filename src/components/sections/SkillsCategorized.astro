@@ -1,0 +1,140 @@
+---
+import Section from "../Section.astro"
+import HTML from "@/icons/html.astro"
+import CSS from "@/icons/css.astro"
+import JavaScript from "@/icons/javascript.astro"
+import TypeScript from "@/icons/type.astro"
+import React from "@/icons/react.astro"
+import Node from "@/icons/node.astro"
+import MySQL from "@/icons/sql.astro"
+import Git from "@/icons/git.astro"
+import GitHub from "@/icons/GitHub.astro"
+import Tailwind from "@/icons/tailwind.astro"
+import Next from "@/icons/next.astro"
+import Swift from "@/icons/swift.astro"
+import SwiftUI from "@/icons/swiftui.astro"
+import Kotlin from "@/icons/kotlin.astro"
+import Flutter from "@/icons/flutter.astro"
+import Android from "@/icons/android.astro"
+import Django from "@/icons/django.astro"
+import Python from "@/icons/python.astro"
+import Bootstrap from "@/icons/bootstrap.astro"
+import Strapi from "@/icons/strapi.astro"
+import Postgresql from "@/icons/postgresql.astro"
+import DigitalOcean from "@/icons/digitalOcean.astro"
+import AstroIcon from "@/icons/astroIcon.astro"
+import Supabase from "@/icons/supabase.astro"
+import type { Skills } from "@/cv"
+import Figma from "@/icons/figma.astro"
+import Canva from "@/icons/canva.astro"
+import Capcut from "@/icons/capcut.astro"
+import Wordpress from "@/icons/wordpress.astro"
+import BootstrapStudio from "@/icons/bootstrapstudio.astro"
+
+const { skills, title } = Astro.props as { skills: Skills[]; title: string }
+
+const SKILLS_ICONS: Record<string, any> = {
+    Next,
+    HTML,
+    CSS,
+    JavaScript,
+    TypeScript,
+    React,
+    Node,
+    MySQL,
+    Git,
+    GitHub,
+    Tailwind,
+    Swift,
+    SwiftUI,
+    Kotlin,
+    Flutter,
+    Android,
+    Django,
+    Python,
+    Bootstrap,
+    Strapi,
+    Postgresql,
+    DigitalOcean,
+    Astro: AstroIcon,
+    Supabase,
+}
+---
+
+<Section title={title ? title : "Habilidades"}>
+    <h3 class="font-semibold">Stack Principal:</h3>
+    <ul>
+        {
+            skills.map(({ name }) => {
+                const iconName = name === "Next.js" ? "Next" : name
+
+                const Icon = SKILLS_ICONS[iconName]
+
+                return (
+                    <li class="inline-flex items-center rounded-md border px-2 py-0.5 text-xs font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-primary/80 text-primary-foreground hover:bg-primary/60 print:text-[10px]">
+                        {Icon && <Icon />} <span>{name}</span>
+                    </li>
+                )
+            })
+        }
+    </ul>
+    <h3 class="font-semibold">Diseño - Edicion de Videos:</h3>
+    <ul>
+        <li>
+            <Figma /><span>Figma</span>
+        </li>
+        <li>
+            <Canva /><span>Canva Pro</span>
+        </li>
+        <li>
+            <Capcut /><span>Capcut</span>
+        </li>
+    </ul>
+    <h3 class="font-semibold">Herramientas adicionales:</h3>
+    <ul class="flex flex-col gap-4">
+        <div class="flex flex-row gap-2 items-center">
+            <li>
+                <Wordpress /><span>Wordpress/headless</span>
+            </li>
+            <p class="text-xs">
+                Neve Pro business licence. Ej. Deployado: <a
+                    href="http://wp.iverse.dev/"
+                    target="_blank"
+                    rel="noopener noreferrer">http://wp.iverse.dev/</a
+                >
+            </p>
+        </div>
+        <div class="flex flex-row gap-2 items-center">
+            <li>
+                <BootstrapStudio /><span>Bootstrap Studio</span>
+            </li>
+            <p class="text-xs">
+                Licence. Mas sobre: <a
+                    href="https://bootstrapstudio.io/"
+                    target="_blank"
+                    rel="noopener noreferrer">https://bootstrapstudio.io/</a
+                >
+            </p>
+        </div>
+    </ul>
+</Section>
+
+<style>
+    ul {
+        display: inline-flex;
+        gap: 4px;
+        flex-wrap: wrap;
+    }
+
+    li {
+        align-items: center;
+        background: #eee;
+        border-radius: 6px;
+        color: black;
+        display: flex;
+        font-size: 0.8rem;
+        font-weight: 500;
+        gap: 4px;
+        padding: 0.2rem 0.4rem;
+    }
+</style>

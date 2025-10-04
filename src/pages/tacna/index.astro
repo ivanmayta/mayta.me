@@ -1,0 +1,59 @@
+---
+import Layout from "@/layouts/Layout.astro"
+
+import About from "@/components/sections/About.astro"
+import Hero from "@/components/sections/Hero.astro"
+import Projects from "@/components/sections/Projects.astro"
+import KeyboardManager from "@/components/KeyboardManager.astro"
+import { getLangFromUrl, useTranslations } from "@/i18n/utils"
+import Education from "@/components/sections/Education.astro"
+import type {
+    Basics,
+    Languages,
+    Projects as ProjectsType,
+    Work,
+    Skills as SkillsType,
+    Education as EducationType,
+} from "@/cv"
+import Contributions from "@/components/sections/Contributions.astro"
+import SkillsCategorized from "@/components/sections/SkillsCategorized.astro"
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+
+const basics = t("basics") as Basics
+const languages = t("languages") as Languages[]
+const projects = t("projects") as ProjectsType[]
+const experience = t("work") as Work[]
+const skills = t("skills") as SkillsType[]
+const education = t("education") as EducationType[]
+console.log(education)
+---
+
+<Layout title={`Curriculum de ${basics.name} - ${basics.label}`}>
+    <main>
+        <Hero basics={basics} languages={languages} />
+        <About paragraphs={basics.paragraphs} />
+        <Projects projects={projects} />
+        <!--<Languages />  -->
+        <Contributions experience={experience} />
+
+        <SkillsCategorized skills={skills} />
+        <Education education={education} />
+    </main>
+
+    <KeyboardManager />
+</Layout>
+
+<style>
+    main {
+        padding: 2rem;
+        margin: auto;
+        width: 100%;
+    }
+
+    @media (width <= 700px) {
+        main {
+            padding: 2rem;
+        }
+    }
+</style>

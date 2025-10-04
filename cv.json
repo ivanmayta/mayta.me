@@ -387,6 +387,14 @@
             "technologies": ["Freelance", "Astro", "Tailwind", "JavaScript"],
             "url": "https://ssomacal-pe.vercel.app",
             "github": "https://github.com/ivanmayta"
+        },
+        {
+            "name": "Kumo bubble tea Tacna",
+            "description": "Landing para la empresa de Kumo bubble tea Tacna.",
+            "highlights": ["Diseño Responsive y minimalista"],
+            "technologies": ["Freelance", "Astro", "Tailwind", "JavaScript"],
+            "url": "https://drink-aesthetic.pages.dev/",
+            "github": "https://github.com/ivanmayta"
         }
     ]
 }
