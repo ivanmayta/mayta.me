@@ -1,51 +1,87 @@
 ---
-import type { Work } from "@/cv"
 import Section from "../Section.astro"
 
-const { experience: workExperience, title } = Astro.props as {
-    experience: Work[]
+const { title } = Astro.props as {
     title: string
 }
-const work = [
-    {
-        name: "jsconf.es",
-        position: "Mejorar el diseño responsive de la web.",
-        url: "https://github.com/midudev/jsconf.es/commits?author=ivanmayta",
-        summary: "I worked on the jsconf.es website",
-    },
-    {
-        name: "peru.ai-hackathon.co",
-        position:
-            "Mejora en el diseño responsive e implementacion de nuevas features.",
-        url: "https://github.com/crafter-station/peru.ai-hackathon.co/pull/24",
-        summary: "I worked on the Peru AI Hackathon website",
-    },
-]
+
+interface Contribution {
+    name: string
+    position: string
+    url: string
+    startDate: string
+    summary: string
+}
+
+let contributions: Contribution[] = []
+
+try {
+    const response = await fetch(
+        "https://api.github.com/search/issues?q=author:ivanmayta+type:pr+-user:ivanmayta",
+    )
+    const data = await response.json()
+
+    if (data.items) {
+        contributions = data.items.map((item: any) => {
+            const repoName = item.repository_url.split("/").slice(-1)[0]
+            const repoOwner = item.repository_url.split("/").slice(-2, -1)[0]
+
+            return {
+                name: `${repoOwner}/${repoName}`,
+                position: item.title,
+                url: item.html_url,
+                startDate: item.created_at,
+                summary: `Contribution to ${repoName} project.`,
+            }
+        })
+
+        // Mantener repositorios únicos para no saturar la sección
+        const seenRepos = new Set()
+        contributions = contributions.filter((item: Contribution) => {
+            if (seenRepos.has(item.name)) {
+                return false
+            }
+            seenRepos.add(item.name)
+            return true
+        })
+    }
+} catch (error) {
+    console.error("Error fetching GitHub contributions:", error)
+}
+
+const work = contributions
 ---
 
 <Section title={title ? title : "Contribuciones"}>
     <ul>
         {
-            work.map(({ name, position, summary, url }) => {
+            work.map(({ name, startDate, position, url }) => {
+                const startYear = new Date(startDate).getFullYear()
+
                 return (
-                    <li class="mb-3">
+                    <li class="mb-6">
                         <article>
                             <div class="rounded-lg bg-card text-card-foreground">
                                 <div class="flex flex-col space-y-1.5">
-                                    <div class="flex items-center justify-between gap-x-2 gap-y-4 text-base">
-                                        <h3 class="font-semibold leading-none">
+                                    <div class="flex items-center justify-between gap-x-2 text-base">
+                                        <h3 class="font-semibold leading-none flex items-center gap-x-2 flex-wrap">
                                             <a
                                                 class="hover:underline"
                                                 href={url}
                                                 title={`Ver ${name}`}
                                                 target="_blank"
                                             >
-                                                {name}:{" "}
-                                                <span class=" font-normal text-foreground/80">
-                                                    {position}
-                                                </span>
+                                                {name}
                                             </a>
+                                            <span class="inline-flex items-center rounded-md border px-2 py-0.5 text-[10px] font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-gray-200 bg-gray-50/50 text-foreground/60 hover:bg-gray-100 print:text-[8px] print:border-none">
+                                                {position}
+                                            </span>
                                         </h3>
+                                        <div class="text-sm text-foreground/60">
+                                            <time datetime={startDate}>
+                                                {startYear}
+                                            </time>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

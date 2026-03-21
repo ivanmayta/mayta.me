@@ -11,7 +11,6 @@ import type {
     Basics,
     Languages,
     Projects as ProjectsType,
-    Work,
     Skills as SkillsType,
     Education as EducationType,
 } from "@/cv"
@@ -23,7 +22,6 @@ const t = useTranslations(lang)
 const basics = t("basics") as Basics
 const languages = t("languages") as Languages[]
 const projects = t("projects") as ProjectsType[]
-const experience = t("work") as Work[]
 const skills = t("skills") as SkillsType[]
 const education = t("education") as EducationType[]
 console.log(education)
@@ -35,7 +33,7 @@ console.log(education)
         <About paragraphs={basics.paragraphs} />
         <Projects projects={projects} />
         <!--<Languages />  -->
-        <Contributions experience={experience} />
+        <Contributions />
 
         <SkillsCategorized skills={skills} />
         <Education education={education} />

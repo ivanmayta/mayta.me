@@ -11,10 +11,8 @@ const { experience: work, title } = Astro.props as {
 <Section title={title ? title : "Contribuciones"}>
     <ul>
         {
-            work.map(({ name, startDate, endDate, position, summary, url }) => {
+            work.map(({ name, startDate, position, summary, url }) => {
                 const startYear = new Date(startDate).getFullYear()
-                const endYear =
-                    endDate != null ? new Date(endDate).getFullYear() : ""
 
                 return (
                     <li>
@@ -38,13 +36,6 @@ const { experience: work, title } = Astro.props as {
                                                 data-title={startDate}
                                             >
                                                 {startYear}
-                                            </time>
-                                            {" - "}
-                                            <time
-                                                datetime={endDate}
-                                                data-title={endDate}
-                                            >
-                                                {endYear}
                                             </time>
                                         </div>
                                     </div>

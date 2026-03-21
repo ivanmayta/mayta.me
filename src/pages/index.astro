@@ -6,14 +6,13 @@ import Hero from "@/components/sections/Hero.astro"
 import Projects from "@/components/sections/Projects.astro"
 import Skills from "@/components/sections/Skills.astro"
 import KeyboardManager from "@/components/KeyboardManager.astro"
-import Experience from "@/components/sections/Experience.astro"
+import Contributions from "@/components/sections/Contributions.astro"
 import { getLangFromUrl, useTranslations } from "@/i18n/utils"
 import Education from "@/components/sections/Education.astro"
 import type {
     Basics,
     Languages,
     Projects as ProjectsType,
-    Work,
     Skills as SkillsType,
     Education as EducationType,
 } from "@/cv"
@@ -23,7 +22,6 @@ const t = useTranslations(lang)
 const basics = t("basics") as Basics
 const languages = t("languages") as Languages[]
 const projects = t("projects") as ProjectsType[]
-const experience = t("work") as Work[]
 const skills = t("skills") as SkillsType[]
 const education = t("education") as EducationType[]
 console.log(education)
@@ -35,7 +33,7 @@ console.log(education)
         <About paragraphs={basics.paragraphs} />
         <Projects projects={projects} />
         <!--<Languages />  -->
-        <Experience experience={experience} />
+        <Contributions />
 
         <Skills skills={skills} />
         <Education education={education} />
