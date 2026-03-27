@@ -65,9 +65,9 @@
     ],
     "education": [
         {
-            "institution": "One Oracle Next Education",
+            "institution": "Oracle Next Education",
             "url": "",
-            "area": "Frontend Developer",
+            "area": "Frontend Developer con React",
             "studyType": "Bachelor",
             "startDate": "2024-01-01",
             "endDate": "2024-08-01",

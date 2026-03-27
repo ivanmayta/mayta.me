@@ -24,9 +24,15 @@ import Postgresql from "@/icons/postgresql.astro"
 import DigitalOcean from "@/icons/digitalOcean.astro"
 import AstroIcon from "@/icons/astroIcon.astro"
 import Supabase from "@/icons/supabase.astro"
+import Figma from "@/icons/figma.astro"
+import Canva from "@/icons/canva.astro"
+import Capcut from "@/icons/capcut.astro"
+import Wordpress from "@/icons/wordpress.astro"
+import BootstrapStudio from "@/icons/bootstrapstudio.astro"
+import Claude from "@/icons/claude.astro"
 import type { Skills } from "@/cv"
 
-const { skills, title } = Astro.props as { skills: Skills[]; title: string }
+const { skills } = Astro.props as { skills: Skills[] }
 
 const SKILLS_ICONS: Record<string, any> = {
     Next,
@@ -53,43 +59,174 @@ const SKILLS_ICONS: Record<string, any> = {
     DigitalOcean,
     Astro: AstroIcon,
     Supabase,
+    Figma,
+    Canva,
+    Capcut,
+    Wordpress,
+    BootstrapStudio,
+    Claude,
 }
+
+const categories = [
+    {
+        label: "Main stack",
+        type: "main",
+        groups: [
+            ["Astro", "Next.js", "React", "TypeScript", "Node", "Tailwind"],
+        ],
+    },
+    {
+        label: "exposure",
+        type: "familiar",
+        groups: [
+            [
+                "Python",
+                "FastAPI",
+                "Postgresql",
+                "MySQL",
+                "Kotlin",
+                "Android Studio",
+                "React Native ",
+                "Strapi",
+                "Wordpress",
+                "Supabase",
+                "n8n"
+            ],
+        ],
+    },
+    {
+        label: "tooling",
+        type: "tools",
+        groups: [
+            [
+                "Claude Code",
+                "Git",
+                "GitHub",
+                "Figma",
+                "Canva",
+                "DigitalOcean",
+                "Supabase",
+            ],
+        ],
+    },
+]
 ---
 
-<Section title={title ? title : "Habilidades"}>
-    <ul>
+<Section title="Habilidades">
+    <div class="skills-grid">
         {
-            skills.map(({ name }) => {
-                const iconName = name === "Next.js" ? "Next" : name
-
-                const Icon = SKILLS_ICONS[iconName]
-
-                return (
-                    <li class="inline-flex items-center rounded-md border px-2 py-0.5 text-xs font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-primary/80 text-primary-foreground hover:bg-primary/60 print:text-[10px]">
-                        {Icon && <Icon />} <span>{name}</span>
-                    </li>
-                )
-            })
+            categories.map(({ label, type, groups }) => (
+                <div class="category-row">
+                    <span class="category-label">{label}</span>
+                    <div class="groups">
+                        {groups.map((group) => (
+                            <ul class="badge-list">
+                                {group.map((name) => {
+                                    const iconName =
+                                        name === "Next.js"
+                                            ? "Next"
+                                            : name === "Claude Code"
+                                              ? "Claude"
+                                              : name
+                                    const Icon = SKILLS_ICONS[iconName]
+                                    return (
+                                        <li class={`badge badge--${type}`}>
+                                            {Icon && <Icon />}
+                                            <span>{name}</span>
+                                        </li>
+                                    )
+                                })}
+                            </ul>
+                        ))}
+                    </div>
+                </div>
+            ))
         }
-    </ul>
+    </div>
 </Section>
 
 <style>
-    ul {
-        display: inline-flex;
-        gap: 4px;
-        flex-wrap: wrap;
+    .skills-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 
-    li {
-        align-items: center;
-        background: #eee;
-        border-radius: 6px;
-        color: black;
+    .category-row {
         display: flex;
-        font-size: 0.8rem;
-        font-weight: 500;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .category-label {
+        font-family: monospace;
+        font-size: 0.7rem;
+        color: #999;
+        text-transform: lowercase;
+        letter-spacing: 0.03em;
+        min-width: 64px;
+        padding-top: 3px;
+        flex-shrink: 0;
+    }
+
+    .groups {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .badge-list {
+        display: flex;
+        flex-wrap: wrap;
         gap: 4px;
-        padding: 0.2rem 0.4rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        border-radius: 6px;
+        font-size: 0.78rem;
+        font-weight: 500;
+        padding: 0 0.4rem;
+        height: 22px;
+        line-height: 1;
+        box-sizing: border-box;
+    }
+
+    .badge :global(svg) {
+        width: 12px;
+        height: 12px;
+        flex-shrink: 0;
+        display: block;
+    }
+
+    .badge--main {
+        background: #eee;
+        color: #111;
+    }
+
+    .badge--familiar {
+        background: transparent;
+        border: 1px solid #ddd;
+        color: #333;
+    }
+
+    .badge--tools {
+        background: transparent;
+        border: 1px solid #ddd;
+        color: #333;
+    }
+
+    @media print {
+        .badge {
+            font-size: 10px;
+        }
+        .category-label {
+            font-size: 9px;
+        }
     }
 </style>
