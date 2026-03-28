@@ -9,84 +9,134 @@ const { projects, title } = Astro.props as {
 ---
 
 <Section title={title ? title : "Proyectos"}>
-    {
-        projects
-            .slice(0, 4)
-            .map(
-                ({
-                    url,
-                    description,
-                    highlights,
-                    name,
-                    isActive,
-                    github,
-                    technologies,
-                }) => {
-                    return (
-                        <article class="mt-4">
-                            <div class="rounded-lg bg-card text-card-foreground py-1 print:py-0">
-                                <div class="flex flex-col space-y-1.5 print:space-y-1">
-                                    <div class="flex items-center justify-between gap-x-2 text-base">
-                                        <h3 class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none print:text-sm">
-                                            <a
-                                                class="hover:underline"
-                                                href={url}
-                                                target="_blank"
-                                                title={`Ver el proyecto ${name}`}
-                                            >
-                                                {name}
-                                            </a>
-                                            <ul class="list-none p-0 hidden gap-x-1 sm:inline-flex">
-                                                {technologies?.map(
-                                                    (technology) => {
-                                                        return (
-                                                            <li class="inline-flex items-center rounded-md border px-2 py-0.5 font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 align-middle text-xs print:px-1 print:py-0.5 print:text-[8px] print:leading-tight">
-                                                                {technology}
-                                                            </li>
-                                                        )
-                                                    }
-                                                )}
-                                            </ul>
-                                        </h3>
-                                        <div class="flex items-center justify-center gap-x-2">
-                                            {isActive && (
-                                                <span class="animate-pulse text-green-500 ">
-                                                    •
-                                                </span>
-                                            )}
-                                            {github && (
-                                                <a
-                                                    class:list="text-sm tabular-nums text-gray-500"
-                                                    class="github-code-link"
-                                                    href={github}
-                                                    target="_blank"
-                                                    title={`Ver código fuente del proyecto ${name}`}
-                                                >
-                                                    <GitHub />
-                                                </a>
-                                            )}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-pretty font-mono text-xs text-muted-foreground">
-                                <div class="mt-2 text-sm text-foreground/80 print:mt-1 print:text-[10px] text-pretty">
-                                    {description}
-                                    <ul class="list-inside list-disc">
-                                        {highlights.map((highlight) => {
-                                            return <li>{highlight}</li>
-                                        })}
-                                    </ul>
-                                </div>
-                            </div>
-                        </article>
-                    )
-                }
-            )
-    }
-    <a
-        class="float-right text-sm hover:underline"
-        href="https://iverse.dev/projects"
-        target="_blank">Ver más</a
-    >
+    <ul class="project-list">
+        {
+            projects.slice(0, 4).map(({ url, highlights, name, isActive, github, technologies }) => (
+                <li class="project-row">
+                    <div class="project-left">
+                        <a class="project-name" href={url} target="_blank" title={`Ver ${name}`}>
+                            {name}
+                        </a>
+                        {isActive && <span class="dot">•</span>}
+                        <ul class="tag-list">
+                            {technologies?.map((t) => <li class="tag">{t}</li>)}
+                        </ul>
+                        {github && (
+                            <a class="github-link ml-auto" href={github} target="_blank" title={`Código de ${name}`}>
+                                <GitHub />
+                            </a>
+                        )}
+                    </div>
+                    <p class="project-desc">{highlights.join(" · ")}</p>
+                </li>
+            ))
+        }
+    </ul>
+    <a class="ver-mas" href="https://iverse.dev/projects" target="_blank">Ver más</a>
 </Section>
+
+<style>
+    .project-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-row {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .project-left {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .project-name {
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: inherit;
+        white-space: nowrap;
+    }
+
+    .project-name:hover {
+        text-decoration: underline;
+    }
+
+    .dot {
+        color: #22c55e;
+        font-size: 1rem;
+        line-height: 1;
+        animation: pulse 2s infinite;
+    }
+
+    .project-desc {
+        font-family: monospace;
+        font-size: 0.875rem;
+        color: #555;
+        margin: 0;
+        line-height: 1.4;
+    }
+
+.tag-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3px;
+    }
+
+    .tag {
+        font-size: 0.7rem;
+        font-weight: 500;
+        background: #eee;
+        border-radius: 4px;
+        padding: 1px 5px;
+        color: #333;
+        white-space: nowrap;
+    }
+
+    .github-link {
+        color: #666;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        margin-left: auto;
+    }
+
+    .github-link:hover {
+        color: #000;
+    }
+
+    .ver-mas {
+        display: block;
+        text-align: right;
+        font-size: 0.8rem;
+        margin-top: 8px;
+        color: inherit;
+    }
+
+    .ver-mas:hover {
+        text-decoration: underline;
+    }
+
+
+    @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.3; }
+    }
+
+    @media print {
+        .project-name { font-size: 10px; }
+        .project-desc { font-size: 9px; }
+        .tag { font-size: 8px; }
+    }
+</style>

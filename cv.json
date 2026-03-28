@@ -6,9 +6,9 @@
         "email": "ivan.rodrigo.dev@gmail.com",
         "phone": "+51 926786317",
         "url": "https://midu.dev",
-        "summary": "Desarrollador de software, actualmente enfocado en la web con tecnologías como Astro, Nextjs y React",
+        "summary": "Desarrollador web frontend — Astro, Next.js, React, HTML, CSS, JavaScript.",
         "paragraphs": [
-            "Desarrollador Fullstack enfocado en el frontend, especializado en aplicaciones React de alto rendimiento. Experiencia en metogologias de trabajo colaborativo como SCRUM. Conocimiento en soluciones de inteligencia artificial (AI), inteligencia de negocios (BI), algoritmos, estructuras de datos, desarrollo movil, desktop y videojuegos."
+            "Desarrollador web fullstack con foco en el frontend, especializado en construir interfaces y aplicaciones con React, Next.js y Astro. Con conocimientos en IA, BI, algoritmos, estructuras de datos, desarrollo móvil, desktop y videojuegos."
         ],
         "location": {
             "address": "",
@@ -21,7 +21,7 @@
             {
                 "network": "LinkedIn",
                 "username": "iverse",
-                "url": "https://www.linkedin.com/in/iverse/"
+                "url": "https://www.linkedin.com/in/ivanrdgo/"
             },
 
             {
@@ -340,13 +340,9 @@
             "name": "izimport.site",
             "isActive": true,
             "description": "Plataforma de catálogo de productos de comercio electrónico para empresas B2B y B2C.",
-            "highlights": [
-                "Uso de ISR(Incremental Static Regeneration) para actualizar los catálogos de productos",
-                "Integracion de la API de DHL para el seguimiento de de envios internacionales",
-                "Integración de la API de Exchange Rates para obtener tipos de cambio"
-            ],
+            "highlights": ["ISR", "DHL API", "Exchange Rates API"],
             "technologies": [
-                "Startup",
+                "Side Project",
                 "Next.js",
                 "Supabase",
                 "React",
@@ -361,10 +357,7 @@
             "name": "Importa Facil",
             "isActive": true,
             "description": "Seguimiento de envios internacionales por DHL Express y cotización de importaciones",
-            "highlights": [
-                "+100 descargas en Google Play Store",
-                "Seguimiento de envios internacionales por DHL Express y cotización de importaciones"
-            ],
+            "highlights": ["+100 descargas Google Play", "DHL Express", "cotización de importaciones"],
             "technologies": [
                 "Site  Project",
                 "Kotlin",
@@ -379,21 +372,17 @@
             "name": "ssomacal.com",
             "isActive": true,
             "description": "Landing para la empresa de SEGURIDAD, SALUD OCUPACIONAL, MEDIO AMBIENTE Y CALIDAD (ssomacal).",
-            "highlights": [
-                "Diseño Responsive",
-                "Buenas Prácticas de SEO para mejorar el posicionamiento en Google",
-                "100% de accesibilidad, performance y SEO"
-            ],
-            "technologies": ["Freelance", "Astro", "Tailwind", "JavaScript"],
+            "highlights": ["Responsive", "100% SEO", "100% performance"],
+            "technologies": ["Practice Project", "Astro", "Tailwind", "JavaScript"],
             "url": "https://ssomacal-pe.vercel.app",
             "github": "https://github.com/ivanmayta"
         },
         {
-            "name": "Kumo bubble tea Tacna",
-            "description": "Landing para la empresa de Kumo bubble tea Tacna.",
-            "highlights": ["Diseño Responsive y minimalista"],
-            "technologies": ["Freelance", "Astro", "Tailwind", "JavaScript"],
-            "url": "https://drink-aesthetic.pages.dev/",
+            "name": "Kumo bubble tea ",
+            "description": "Landing para la empresa de Kumo bubble tea.",
+            "highlights": ["Responsive", "minimalista", "scroll-based image sequence"],
+            "technologies": ["Practice Project", "Astro", "Tailwind", "JavaScript", "GSAP"],
+            "url": "https://kumobubbletea.vercel.app/",
             "github": "https://github.com/ivanmayta"
         }
     ]
