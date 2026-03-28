@@ -351,7 +351,14 @@
                 "zustand"
             ],
             "url": "https://izimport.site",
-            "github": "https://github.com/ivanmayta"
+            "github": "https://github.com/ivanmayta/izimport.com",
+            "related": [
+                {
+                    "name": "tools.izimport.site",
+                    "url": "https://tools.izimport.site",
+                    "github": "https://github.com/ivanmayta/tools.izimport.site"
+                }
+            ]
         },
         {
             "name": "Importa Facil",
@@ -365,7 +372,7 @@
                 "React-Native-version"
             ],
             "url": "https://iverse.dev/projects/importa-facil",
-            "github": "https://github.com/ivanmayta"
+            "link": "https://play.google.com/store/apps/developer?id=iverse.dev"
         },
 
         {
@@ -375,7 +382,7 @@
             "highlights": ["Responsive", "100% SEO", "100% performance"],
             "technologies": ["Practice Project", "Astro", "Tailwind", "JavaScript"],
             "url": "https://ssomacal-pe.vercel.app",
-            "github": "https://github.com/ivanmayta"
+            "github": "https://github.com/ivanmayta/ssomacal.pe"
         },
         {
             "name": "Kumo bubble tea ",
